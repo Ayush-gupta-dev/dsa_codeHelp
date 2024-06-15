@@ -1,0 +1,26 @@
+#include<iostream>
+#include<algorithm>
+#include<vector>
+
+using namespace std;
+
+class comparator{
+    public:
+        bool operator()(int a, int b){
+            return a > b;
+        }
+};
+
+int main(){
+    
+    vector<int> arr;
+    arr.push_back(20);
+    arr.push_back(15);
+    arr.push_back(30);
+
+    sort(arr.begin(),arr.end(),comparator()); //ab desc hoga
+
+    
+    return 0;
+
+}
